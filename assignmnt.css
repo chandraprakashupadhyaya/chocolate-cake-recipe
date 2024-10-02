@@ -1,0 +1,142 @@
+/* Basic layout and styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+.recipe-card {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border-radius: 10px; /* Rounded corners for the recipe card */
+}
+
+img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.5s ease, opacity 0.5s ease; /* Adding smooth transition for image */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Highlighted step styling */
+.highlighted {
+    background-color: #ffeb3b; /* Yellow highlight color */
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Button styling */
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 10px 0;
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* List styling */
+ul, ol {
+    text-align: left;
+    margin-top: 20px;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Hover effect on ingredients */
+ul li:hover {
+    color: #f09;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Progress bar styling */
+.progress-bar {
+    width: 100%;
+    background-color: #f3f3f3;
+    height: 10px;
+    margin: 20px 0;
+}
+
+.progress {
+    width: 0;
+    height: 100%;
+    background-color: #4caf50;
+    animation: fillProgress 5s forwards;
+}
+
+@keyframes fillProgress {
+    to { width: 100%; }
+}
+
+/* Fade-in effect for image and success message */
+.fade-in {
+    animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* Fade-out effect for transitions */
+.fade-out {
+    animation: fadeOut 1s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+/* Media queries for responsiveness */
+@media only screen and (max-width: 768px) {
+    .recipe-card {
+        padding: 10px;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Success message styling */
+.success-message {
+    font-size: 2.5em;
+    color: #28a745; /* Green for success */
+    margin-top: 50px;
+    text-align: center;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+/* Image styling for the success message */
+img.success-image {
+    border-radius: 10px;
+    border: 2px solid #ccc;
+    width: 300px;
+    animation: fadeIn 1.5s ease-in forwards; /* Smooth fade-in effect */
+}
+
+/* Styling for the personal message */
+.made-by {
+    font-size: 1.2em;
+    color: #555; /* Grey color for the personal message */
+    margin-top: 20px;
+    font-style: italic; /* Italicized for emphasis */
+}
